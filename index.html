@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>media</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="css/mobile.css" />
+
+		<link rel="stylesheet" media="only screen and (min-width: 481px) and (max-width: 960px)" href="css/tablet.css" />
+
+		<meta name="viewport" content="initial-scale=1">
+
+
+		<script>
+		$(document).ready(function(){
+	
+		$("#banner").click(function(){
+		$('html, body').css({
+		    'overflow': 'hidden',
+		    'height': '100%'
+		});
+		$("#lightbox").fadeIn();
+
+		$("#lb_UI").velocity("callout.shake");
+
+	});
+
+	$("#lb_UI a").click(function(){
+		$('html, body').css({
+		    'overflow': 'auto',
+		    'height': 'auto'
+		});
+		$("#lightbox").fadeOut();
+	});
+
+
+});
+</script>		
+</head>
+<body>
+<div id="lightbox">
+		<div id="lb_UI">
+			<a href="">close</a>
+		</div>
+
+	</div>
+	<div class="container">
+		<div id="banner">
+		WELCOME TO MY SITE!
+
+		</div>
+		<nav>
+			<ul>
+				<li>HOME</li>
+				<li>ABOUT</li>
+				<li>FAQ</li>
+				<li>CONTACT</li>
+			</ul>
+		</nav>
+
+		<div id="mainContent">
+			<div id="sidebar"></div>
+			<div id="mainArea">
+			<p>
+				
+
+			</div>
+			<div id="footer">
+				Copyright &copy; 2015
+			</div>
+		</div>
+		
+	</div>
+	<script src="velocity/velocity.js"></script>
+	<script src="velocity/velocity.ui.js"></script>
+
+
+</body>
+</html>
